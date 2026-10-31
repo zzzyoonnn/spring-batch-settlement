@@ -1,3 +1,23 @@
 spring:
   application:
     name: settlement
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch_db?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update       # Entity를 보고 테이블을 자동 생성/수정함
+    show-sql: true           # 실행되는 SQL을 콘솔에 보여줌 (강의 시 유용)
+    properties:
+      hibernate:
+        format_sql: true     # SQL을 보기 좋게 줄바꿈 해줌
+
+  batch:
+    jdbc:
+      initialize-schema: always # 배치가 실행될 때 필요한 메타 테이블들을 자동 생성해줌
+    job:
+      enabled: false
