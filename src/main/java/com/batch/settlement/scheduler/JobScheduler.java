@@ -25,7 +25,7 @@ public class JobScheduler {
   private final JobOperator jobOperator;
   private final Job settlementJob;
 
-  @Scheduled(cron = "0 45 0 * * *", zone = "Asia/Seoul")
+  @Scheduled(cron = "0 0 4 * * *", zone = "Asia/Seoul")
   public void runJob() {
 
     String targetDate = LocalDate.now(ZoneId.of("Asia/Seoul"))
