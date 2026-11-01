@@ -18,6 +18,6 @@ spring:
 
   batch:
     jdbc:
-      initialize-schema: always # 배치가 실행될 때 필요한 메타 테이블들을 자동 생성해줌
+      initialize-schema: never # Spring Batch 메타 테이블 자동 생성 비활성화
     job:
       enabled: false
