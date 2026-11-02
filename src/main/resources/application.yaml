@@ -20,4 +20,4 @@ spring:
     jdbc:
       initialize-schema: never # Spring Batch 메타 테이블 자동 생성 비활성화
     job:
-      enabled: false
+      enabled: true
